@@ -6,11 +6,16 @@ import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.junit.ArchUnitRunner;
 import com.tngtech.archunit.lang.ArchRule;
+import io.github.opensanca.arqv.ArqvRule;
 import org.junit.runner.RunWith;
 
 @RunWith(ArchUnitRunner.class)
 @AnalyzeClasses(packages = "")
-public class RepositoriesShouldBeInSpecificPackageRule {
+@ArqvRule(
+    name = "REPOSITORIES_SHOULD_STAY_ON_REPOSITORY_PACKAGE",
+    group = "SPRING_REPOSITORY_GROUP_RULES"
+)
+public class RepositoriesShouldBeInSpecificPackage {
 
     @ArchTest
     static final ArchRule REPOSITORIES_SHOULD_STAY_ON_REPOSITORY_PACKAGE =

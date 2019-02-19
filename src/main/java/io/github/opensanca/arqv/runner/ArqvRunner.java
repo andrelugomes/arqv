@@ -32,7 +32,7 @@ import org.junit.runners.model.RunnerBuilder;
  */
 public class ArqvRunner extends ParentRunner<Runner> {
 
-    private static final ArqvRules[] DEFAULT_TESTS = Defaults.tests();
+    private static final ArqvRules[] DEFAULT_TESTS = Defaults.arqvRules();
 
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.TYPE)
@@ -51,7 +51,7 @@ public class ArqvRunner extends ParentRunner<Runner> {
         ArqvGroupRules[] excludingGroupRules() default {};
     }
 
-    private static Class<?>[] getAnnotatedClasses(final Class<?> clazz) throws InitializationError {
+    private static Class<?>[] getAnnotatedClasses(final Class<?> clazz) {
         Optional<RunTests> runTests = Optional.ofNullable(clazz.getAnnotation(RunTests.class));
         if (runTests.isPresent()) {
             final RunTests runTestsAnnotation = runTests.get();

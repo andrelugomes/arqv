@@ -1,6 +1,6 @@
 package io.github.opensanca.arqv.enums;
 
-import io.github.opensanca.arqv.rules.spring.repositoy.RepositoriesShouldBeInSpecificPackageRule;
+import io.github.opensanca.arqv.rules.spring.repositoy.RepositoriesShouldBeInSpecificPackage;
 import io.github.opensanca.arqv.rules.spring.rest.AllDeleteMappingShouldReturn204Rule;
 import io.github.opensanca.arqv.rules.spring.rest.AllGetMappingShouldReturn200Rule;
 import io.github.opensanca.arqv.rules.spring.rest.AllPatchMappingShouldReturn200Rule;
@@ -19,7 +19,7 @@ public enum ArqvRules {
     ALL_PUBLIC_METHODS_IN_THE_RESOURCE_LAYER_SHOULD_RETURN_RESPONSE_ENTITY_OBJECT(AllPublicMethodsInTheResourceLayerShouldReturnResponseEntityObjectRule.class),
     ONLY_RESOURCES_MAY_USE_REST_CONTROLLER_ANNOTATION(OnlyResourcesMayUseRestControllerAnnotationRule.class),
     RESOURCES_SHOULD_BE_IN_SPECIFIC_PACKAGE(ResourcesShouldBeInSpecificPackageRule.class),
-    REPOSITORIES_SHOULD_STAY_ON_REPOSITORY_PACKAGE(RepositoriesShouldBeInSpecificPackageRule.class);
+    REPOSITORIES_SHOULD_STAY_ON_REPOSITORY_PACKAGE(RepositoriesShouldBeInSpecificPackage.class);
 
     private Class<?> value;
 
